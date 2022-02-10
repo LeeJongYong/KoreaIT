@@ -149,6 +149,9 @@
     <Content Include="Day6\FrmStateShow.aspx" />
     <Content Include="Day7\FrmConfiguration.aspx" />
     <Content Include="Day7\FrmCounter.aspx" />
+    <Content Include="Day8\FrmSqlCommand.aspx" />
+    <Content Include="Day8\FrmSqlConnection.aspx" />
+    <Content Include="Day8\FrmSqlDataReader.aspx" />
     <Content Include="DevASPNET.css" />
     <Content Include="Day1\FrmApplicationSession.aspx" />
     <Content Include="Day1\FrmASPNET.aspx" />
@@ -545,6 +548,27 @@
     </Compile>
     <Compile Include="Day7\FrmCounter.aspx.designer.cs">
       <DependentUpon>FrmCounter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Day8\FrmSqlCommand.aspx.cs">
+      <DependentUpon>FrmSqlCommand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Day8\FrmSqlCommand.aspx.designer.cs">
+      <DependentUpon>FrmSqlCommand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Day8\FrmSqlConnection.aspx.cs">
+      <DependentUpon>FrmSqlConnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Day8\FrmSqlConnection.aspx.designer.cs">
+      <DependentUpon>FrmSqlConnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Day8\FrmSqlDataReader.aspx.cs">
+      <DependentUpon>FrmSqlDataReader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Day8\FrmSqlDataReader.aspx.designer.cs">
+      <DependentUpon>FrmSqlDataReader.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
