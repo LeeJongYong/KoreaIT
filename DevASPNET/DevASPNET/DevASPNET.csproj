@@ -46,6 +46,9 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.6.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -110,59 +113,64 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Day2\FrmBulletedList.aspx" />
-    <Content Include="Day2\FrmCheckBox.aspx" />
-    <Content Include="Day2\FrmDropDownList.aspx" />
-    <Content Include="Day2\FrmHyperLink.aspx" />
-    <Content Include="Day2\FrmImage.aspx" />
-    <Content Include="Day2\FrmListBox.aspx" />
-    <Content Include="Day2\FrmTable.aspx" />
-    <Content Include="Day3\FrmCalendar.aspx" />
-    <Content Include="Day3\FrmCalendarQueryString.aspx" />
-    <Content Include="Day3\FrmFileUpload.aspx" />
-    <Content Include="Day3\FrmHiddenField.aspx" />
-    <Content Include="Day3\FrmInputControl.aspx" />
-    <Content Include="Day3\FrmLiteral.aspx" />
-    <Content Include="Day3\FrmLocalize.aspx" />
-    <Content Include="Day3\FrmMultiView.aspx" />
-    <Content Include="Day3\FrmPanel.aspx" />
-    <Content Include="Day3\FrmRadioButton.aspx" />
-    <Content Include="Day3\FrmWizard.aspx" />
-    <Content Include="Day4\FrmCompareValidator.aspx" />
-    <Content Include="Day4\FrmCustomValidator.aspx" />
-    <Content Include="Day4\FrmRangeValidator.aspx" />
-    <Content Include="Day4\FrmRegularExpressionValidator.aspx" />
-    <Content Include="Day4\FrmRequiredFieldValidator.aspx" />
-    <Content Include="Day4\FrmValidationControl.aspx" />
-    <Content Include="Day5\About.aspx" />
-    <Content Include="Day5\Catalog.ascx" />
-    <Content Include="Day5\Category.ascx" />
-    <Content Include="Day5\Contact.aspx" />
-    <Content Include="Day5\Copyright.ascx" />
-    <Content Include="Day5\Default.aspx" />
-    <Content Include="Day5\FrmBlueSkin.aspx" />
-    <Content Include="Day5\FrmRedSkin.aspx" />
-    <Content Include="Day5\FrmSiteMapPath.aspx" />
-    <Content Include="Day5\FrmUserControl.aspx" />
-    <Content Include="Day5\Navigator.ascx" />
-    <Content Include="Day6\FrmStateManagement.aspx" />
-    <Content Include="Day6\FrmStateShow.aspx" />
-    <Content Include="Day7\FrmConfiguration.aspx" />
-    <Content Include="Day7\FrmCounter.aspx" />
-    <Content Include="Day8\FrmSqlCommand.aspx" />
-    <Content Include="Day8\FrmSqlConnection.aspx" />
-    <Content Include="Day8\FrmSqlDataReader.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmBulletedList.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmCheckBox.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmDropDownList.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmHyperLink.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmImage.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmListBox.aspx" />
+    <Content Include="PracASP.NET\Day2\FrmTable.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmCalendar.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmCalendarQueryString.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmFileUpload.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmHiddenField.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmInputControl.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmLiteral.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmLocalize.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmMultiView.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmPanel.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmRadioButton.aspx" />
+    <Content Include="PracASP.NET\Day3\FrmWizard.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmCompareValidator.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmCustomValidator.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmRangeValidator.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmRegularExpressionValidator.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmRequiredFieldValidator.aspx" />
+    <Content Include="PracASP.NET\Day4\FrmValidationControl.aspx" />
+    <Content Include="PracASP.NET\Day5\About.aspx" />
+    <Content Include="PracASP.NET\Day5\Catalog.ascx" />
+    <Content Include="PracASP.NET\Day5\Category.ascx" />
+    <Content Include="PracASP.NET\Day5\Contact.aspx" />
+    <Content Include="PracASP.NET\Day5\Copyright.ascx" />
+    <Content Include="PracASP.NET\Day5\Default.aspx" />
+    <Content Include="PracASP.NET\Day5\FrmBlueSkin.aspx" />
+    <Content Include="PracASP.NET\Day5\FrmRedSkin.aspx" />
+    <Content Include="PracASP.NET\Day5\FrmSiteMapPath.aspx" />
+    <Content Include="PracASP.NET\Day5\FrmUserControl.aspx" />
+    <Content Include="PracASP.NET\Day5\Navigator.ascx" />
+    <Content Include="PracASP.NET\Day6\FrmStateManagement.aspx" />
+    <Content Include="PracASP.NET\Day6\FrmStateShow.aspx" />
+    <Content Include="PracASP.NET\Day7\FrmConfiguration.aspx" />
+    <Content Include="PracASP.NET\Day7\FrmCounter.aspx" />
+    <Content Include="PracASP.NET\Day8\FrmSqlCommand.aspx" />
+    <Content Include="PracASP.NET\Day8\FrmSqlConnection.aspx" />
+    <Content Include="PracASP.NET\Day8\FrmSqlDataReader.aspx" />
+    <Content Include="PracASP.NET\Day9\FrmMemoDelete.aspx" />
+    <Content Include="PracASP.NET\Day9\FrmMemoList.aspx" />
+    <Content Include="PracASP.NET\Day9\FrmMemoModify.aspx" />
+    <Content Include="PracASP.NET\Day9\FrmMemoView.aspx" />
+    <Content Include="PracASP.NET\Day9\FrmMemoWrite.aspx" />
     <Content Include="DevASPNET.css" />
-    <Content Include="Day1\FrmApplicationSession.aspx" />
-    <Content Include="Day1\FrmASPNET.aspx" />
-    <Content Include="Day1\FrmLabel.aspx" />
-    <Content Include="Day1\FrmPageLoad.aspx" />
-    <Content Include="Day1\FrmRequest.aspx" />
-    <Content Include="Day1\FrmRequsetUserHostAddress.aspx" />
-    <Content Include="Day1\FrmResponseBuffer.aspx" />
-    <Content Include="Day1\FrmResponseWrite.aspx" />
-    <Content Include="Day1\FrmServerMapPath.aspx" />
-    <Content Include="Day1\FrmStandardControl.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmApplicationSession.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmASPNET.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmLabel.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmPageLoad.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmRequest.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmRequsetUserHostAddress.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmResponseBuffer.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmResponseWrite.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmServerMapPath.aspx" />
+    <Content Include="PracASP.NET\Day1\FrmStandardControl.aspx" />
     <Content Include="Documents\PracSql.sql" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -206,369 +214,405 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Day1\FrmApplicationSession.aspx.cs">
+    <Compile Include="Models\Memo.cs" />
+    <Compile Include="PracASP.NET\Day1\FrmApplicationSession.aspx.cs">
       <DependentUpon>FrmApplicationSession.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmApplicationSession.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmApplicationSession.aspx.designer.cs">
       <DependentUpon>FrmApplicationSession.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmASPNET.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmASPNET.aspx.cs">
       <DependentUpon>FrmASPNET.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmASPNET.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmASPNET.aspx.designer.cs">
       <DependentUpon>FrmASPNET.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmLabel.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmLabel.aspx.cs">
       <DependentUpon>FrmLabel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmLabel.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmLabel.aspx.designer.cs">
       <DependentUpon>FrmLabel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmPageLoad.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmPageLoad.aspx.cs">
       <DependentUpon>FrmPageLoad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmPageLoad.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmPageLoad.aspx.designer.cs">
       <DependentUpon>FrmPageLoad.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmRequest.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmRequest.aspx.cs">
       <DependentUpon>FrmRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmRequest.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmRequest.aspx.designer.cs">
       <DependentUpon>FrmRequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmRequsetUserHostAddress.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmRequsetUserHostAddress.aspx.cs">
       <DependentUpon>FrmRequsetUserHostAddress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmRequsetUserHostAddress.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmRequsetUserHostAddress.aspx.designer.cs">
       <DependentUpon>FrmRequsetUserHostAddress.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmResponseBuffer.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmResponseBuffer.aspx.cs">
       <DependentUpon>FrmResponseBuffer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmResponseBuffer.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmResponseBuffer.aspx.designer.cs">
       <DependentUpon>FrmResponseBuffer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmResponseWrite.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmResponseWrite.aspx.cs">
       <DependentUpon>FrmResponseWrite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmResponseWrite.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmResponseWrite.aspx.designer.cs">
       <DependentUpon>FrmResponseWrite.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmServerMapPath.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmServerMapPath.aspx.cs">
       <DependentUpon>FrmServerMapPath.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmServerMapPath.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmServerMapPath.aspx.designer.cs">
       <DependentUpon>FrmServerMapPath.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day1\FrmStandardControl.aspx.cs">
+    <Compile Include="PracASP.NET\Day1\FrmStandardControl.aspx.cs">
       <DependentUpon>FrmStandardControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day1\FrmStandardControl.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day1\FrmStandardControl.aspx.designer.cs">
       <DependentUpon>FrmStandardControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmBulletedList.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmBulletedList.aspx.cs">
       <DependentUpon>FrmBulletedList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmBulletedList.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmBulletedList.aspx.designer.cs">
       <DependentUpon>FrmBulletedList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmCheckBox.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmCheckBox.aspx.cs">
       <DependentUpon>FrmCheckBox.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmCheckBox.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmCheckBox.aspx.designer.cs">
       <DependentUpon>FrmCheckBox.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmDropDownList.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmDropDownList.aspx.cs">
       <DependentUpon>FrmDropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmDropDownList.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmDropDownList.aspx.designer.cs">
       <DependentUpon>FrmDropDownList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmHyperLink.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmHyperLink.aspx.cs">
       <DependentUpon>FrmHyperLink.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmHyperLink.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmHyperLink.aspx.designer.cs">
       <DependentUpon>FrmHyperLink.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmImage.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmImage.aspx.cs">
       <DependentUpon>FrmImage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmImage.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmImage.aspx.designer.cs">
       <DependentUpon>FrmImage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmListBox.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmListBox.aspx.cs">
       <DependentUpon>FrmListBox.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmListBox.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmListBox.aspx.designer.cs">
       <DependentUpon>FrmListBox.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day2\FrmTable.aspx.cs">
+    <Compile Include="PracASP.NET\Day2\FrmTable.aspx.cs">
       <DependentUpon>FrmTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day2\FrmTable.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day2\FrmTable.aspx.designer.cs">
       <DependentUpon>FrmTable.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmCalendar.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmCalendar.aspx.cs">
       <DependentUpon>FrmCalendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmCalendar.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmCalendar.aspx.designer.cs">
       <DependentUpon>FrmCalendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmCalendarQueryString.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmCalendarQueryString.aspx.cs">
       <DependentUpon>FrmCalendarQueryString.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmCalendarQueryString.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmCalendarQueryString.aspx.designer.cs">
       <DependentUpon>FrmCalendarQueryString.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmFileUpload.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmFileUpload.aspx.cs">
       <DependentUpon>FrmFileUpload.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmFileUpload.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmFileUpload.aspx.designer.cs">
       <DependentUpon>FrmFileUpload.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmHiddenField.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmHiddenField.aspx.cs">
       <DependentUpon>FrmHiddenField.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmHiddenField.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmHiddenField.aspx.designer.cs">
       <DependentUpon>FrmHiddenField.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmInputControl.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmInputControl.aspx.cs">
       <DependentUpon>FrmInputControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmInputControl.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmInputControl.aspx.designer.cs">
       <DependentUpon>FrmInputControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmLiteral.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmLiteral.aspx.cs">
       <DependentUpon>FrmLiteral.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmLiteral.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmLiteral.aspx.designer.cs">
       <DependentUpon>FrmLiteral.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmLocalize.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmLocalize.aspx.cs">
       <DependentUpon>FrmLocalize.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmLocalize.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmLocalize.aspx.designer.cs">
       <DependentUpon>FrmLocalize.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmMultiView.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmMultiView.aspx.cs">
       <DependentUpon>FrmMultiView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmMultiView.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmMultiView.aspx.designer.cs">
       <DependentUpon>FrmMultiView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmPanel.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmPanel.aspx.cs">
       <DependentUpon>FrmPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmPanel.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmPanel.aspx.designer.cs">
       <DependentUpon>FrmPanel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmRadioButton.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmRadioButton.aspx.cs">
       <DependentUpon>FrmRadioButton.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmRadioButton.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmRadioButton.aspx.designer.cs">
       <DependentUpon>FrmRadioButton.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day3\FrmWizard.aspx.cs">
+    <Compile Include="PracASP.NET\Day3\FrmWizard.aspx.cs">
       <DependentUpon>FrmWizard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day3\FrmWizard.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day3\FrmWizard.aspx.designer.cs">
       <DependentUpon>FrmWizard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmCompareValidator.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmCompareValidator.aspx.cs">
       <DependentUpon>FrmCompareValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmCompareValidator.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmCompareValidator.aspx.designer.cs">
       <DependentUpon>FrmCompareValidator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmCustomValidator.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmCustomValidator.aspx.cs">
       <DependentUpon>FrmCustomValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmCustomValidator.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmCustomValidator.aspx.designer.cs">
       <DependentUpon>FrmCustomValidator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmRangeValidator.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRangeValidator.aspx.cs">
       <DependentUpon>FrmRangeValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmRangeValidator.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRangeValidator.aspx.designer.cs">
       <DependentUpon>FrmRangeValidator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmRegularExpressionValidator.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRegularExpressionValidator.aspx.cs">
       <DependentUpon>FrmRegularExpressionValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmRegularExpressionValidator.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRegularExpressionValidator.aspx.designer.cs">
       <DependentUpon>FrmRegularExpressionValidator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmRequiredFieldValidator.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRequiredFieldValidator.aspx.cs">
       <DependentUpon>FrmRequiredFieldValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmRequiredFieldValidator.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmRequiredFieldValidator.aspx.designer.cs">
       <DependentUpon>FrmRequiredFieldValidator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day4\FrmValidationControl.aspx.cs">
+    <Compile Include="PracASP.NET\Day4\FrmValidationControl.aspx.cs">
       <DependentUpon>FrmValidationControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day4\FrmValidationControl.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day4\FrmValidationControl.aspx.designer.cs">
       <DependentUpon>FrmValidationControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\About.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\About.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Catalog.ascx.cs">
+    <Compile Include="PracASP.NET\Day5\Catalog.ascx.cs">
       <DependentUpon>Catalog.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Catalog.ascx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Catalog.ascx.designer.cs">
       <DependentUpon>Catalog.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Category.ascx.cs">
+    <Compile Include="PracASP.NET\Day5\Category.ascx.cs">
       <DependentUpon>Category.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Category.ascx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Category.ascx.designer.cs">
       <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Contact.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Contact.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Copyright.ascx.cs">
+    <Compile Include="PracASP.NET\Day5\Copyright.ascx.cs">
       <DependentUpon>Copyright.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Copyright.ascx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Copyright.ascx.designer.cs">
       <DependentUpon>Copyright.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Default.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Default.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\FrmBlueSkin.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\FrmBlueSkin.aspx.cs">
       <DependentUpon>FrmBlueSkin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\FrmBlueSkin.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\FrmBlueSkin.aspx.designer.cs">
       <DependentUpon>FrmBlueSkin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\FrmRedSkin.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\FrmRedSkin.aspx.cs">
       <DependentUpon>FrmRedSkin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\FrmRedSkin.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\FrmRedSkin.aspx.designer.cs">
       <DependentUpon>FrmRedSkin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\FrmSiteMapPath.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\FrmSiteMapPath.aspx.cs">
       <DependentUpon>FrmSiteMapPath.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\FrmSiteMapPath.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\FrmSiteMapPath.aspx.designer.cs">
       <DependentUpon>FrmSiteMapPath.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\FrmUserControl.aspx.cs">
+    <Compile Include="PracASP.NET\Day5\FrmUserControl.aspx.cs">
       <DependentUpon>FrmUserControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\FrmUserControl.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\FrmUserControl.aspx.designer.cs">
       <DependentUpon>FrmUserControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day5\Navigator.ascx.cs">
+    <Compile Include="PracASP.NET\Day5\Navigator.ascx.cs">
       <DependentUpon>Navigator.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day5\Navigator.ascx.designer.cs">
+    <Compile Include="PracASP.NET\Day5\Navigator.ascx.designer.cs">
       <DependentUpon>Navigator.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Day6\FrmStateManagement.aspx.cs">
+    <Compile Include="PracASP.NET\Day6\FrmStateManagement.aspx.cs">
       <DependentUpon>FrmStateManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day6\FrmStateManagement.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day6\FrmStateManagement.aspx.designer.cs">
       <DependentUpon>FrmStateManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day6\FrmStateShow.aspx.cs">
+    <Compile Include="PracASP.NET\Day6\FrmStateShow.aspx.cs">
       <DependentUpon>FrmStateShow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day6\FrmStateShow.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day6\FrmStateShow.aspx.designer.cs">
       <DependentUpon>FrmStateShow.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day7\FrmConfiguration.aspx.cs">
+    <Compile Include="PracASP.NET\Day7\FrmConfiguration.aspx.cs">
       <DependentUpon>FrmConfiguration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day7\FrmConfiguration.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day7\FrmConfiguration.aspx.designer.cs">
       <DependentUpon>FrmConfiguration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day7\FrmCounter.aspx.cs">
+    <Compile Include="PracASP.NET\Day7\FrmCounter.aspx.cs">
       <DependentUpon>FrmCounter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day7\FrmCounter.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day7\FrmCounter.aspx.designer.cs">
       <DependentUpon>FrmCounter.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day8\FrmSqlCommand.aspx.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlCommand.aspx.cs">
       <DependentUpon>FrmSqlCommand.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day8\FrmSqlCommand.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlCommand.aspx.designer.cs">
       <DependentUpon>FrmSqlCommand.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day8\FrmSqlConnection.aspx.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlConnection.aspx.cs">
       <DependentUpon>FrmSqlConnection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day8\FrmSqlConnection.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlConnection.aspx.designer.cs">
       <DependentUpon>FrmSqlConnection.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Day8\FrmSqlDataReader.aspx.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlDataReader.aspx.cs">
       <DependentUpon>FrmSqlDataReader.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Day8\FrmSqlDataReader.aspx.designer.cs">
+    <Compile Include="PracASP.NET\Day8\FrmSqlDataReader.aspx.designer.cs">
       <DependentUpon>FrmSqlDataReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoDelete.aspx.cs">
+      <DependentUpon>FrmMemoDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoDelete.aspx.designer.cs">
+      <DependentUpon>FrmMemoDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoList.aspx.cs">
+      <DependentUpon>FrmMemoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoList.aspx.designer.cs">
+      <DependentUpon>FrmMemoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoModify.aspx.cs">
+      <DependentUpon>FrmMemoModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoModify.aspx.designer.cs">
+      <DependentUpon>FrmMemoModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoView.aspx.cs">
+      <DependentUpon>FrmMemoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoView.aspx.designer.cs">
+      <DependentUpon>FrmMemoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoWrite.aspx.cs">
+      <DependentUpon>FrmMemoWrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PracASP.NET\Day9\FrmMemoWrite.aspx.designer.cs">
+      <DependentUpon>FrmMemoWrite.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -597,8 +641,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Day3\files\" />
-    <Folder Include="Models\" />
+    <Folder Include="PracASP.NET\Day3\files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
