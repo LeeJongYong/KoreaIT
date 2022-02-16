@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DotNetNote.Database", "DotNetNote.Database\DotNetNote.Database.sqlproj", "{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67A9FBC-A40F-4170-AC6B-5FB5D4AE732F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D6AE073-2086-435F-A3B8-7B124B8B8B0B}
+	EndGlobalSection
+EndGlobal

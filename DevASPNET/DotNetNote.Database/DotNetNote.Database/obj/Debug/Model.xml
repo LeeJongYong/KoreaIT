@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="DotNetNote.Database.dll" />
+			<Metadata Name="FileName" Value="C:\JYSTUDY\DEVASPNET\DOTNETNOTE.DATABASE\DOTNETNOTE.DATABASE\OBJ\DEBUG\DOTNETNOTE.DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="DotNetNote.Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\JYStudy\DevASPNET\DotNetNote.Database\DotNetNote.Database\obj\Debug\DotNetNote.Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Memos].[PostDate]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Memos].[Num]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Users].[UID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteMemo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	delete Memos
+	where Num = @Num]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Num]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteMemo].[@Num]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteMemo].[@Num]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="81" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.DeleteMemo&#xD;&#xA;(&#xD;&#xA;&#x9;@Num int&#xD;&#xA;)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	delete Users where UID = @UID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteUsers].[@UID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DeleteUsers].[@UID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Offset" Value="417" />
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="76" />
+				<Property Name="StartLine" Value="25" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;create proc dbo.DeleteUsers&#xD;&#xA;&#x9;@UID int&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ListMemo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	select Num, Name, Email, Title, PostDate, PostIP
+	from Memos order by Num desc]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Num]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[PostDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[PostIP]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="110" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.ListMemo&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ListUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	select UID, UserID, Password from Users order by UID desc]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Password]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Offset" Value="132" />
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="91" />
+				<Property Name="StartLine" Value="7" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;create proc dbo.ListUsers&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Memos]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[Num]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[Email]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[Title]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[PostDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Memos].[PostIP]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ModifyMemo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	update Memos
+	set
+		Name = @Name,
+		Email = @Email,
+		Title = @Title
+	where Num = @Num]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyMemo].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyMemo].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyMemo].[@Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Num]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyMemo].[@Num]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyMemo].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyMemo].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyMemo].[@Title]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyMemo].[@Num]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="211" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.ModifyMemo&#xD;&#xA;(&#xD;&#xA;&#x9;@Name&#x9;nvarchar(25),&#xD;&#xA;&#x9;@Email&#x9;nvarchar(100),&#xD;&#xA;&#x9;@Title&#x9;nvarchar(150),&#xD;&#xA;&#x9;@Num&#x9;int&#xD;&#xA;)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ModifyUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	update Users
+	set
+		UserID = @UserId,
+		Password = @Password
+	where
+		UID = @UID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyUsers].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyUsers].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ModifyUsers].[@UID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyUsers].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyUsers].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ModifyUsers].[@UID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Offset" Value="229" />
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="182" />
+				<Property Name="StartLine" Value="12" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;create proc dbo.ModifyUsers&#xD;&#xA;&#x9;@UserId nvarchar(25),&#xD;&#xA;&#x9;@Password nvarchar(20),&#xD;&#xA;&#x9;@UID int&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SearchMeMo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	declare @strSql nvarchar(150)	-- 변수선언
+	set
+		@strSql =
+		'select Num, Name, Email, Title, PostDate, PostIP
+		from Memos
+		where ' + @SearchField + ' Like N''%' + @SearchQuery + '%''order by Num desc'
+	--print strSql
+	Exec (@strSql)	--완성된 sql 실행]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SearchMeMo].[@SearchField]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SearchMeMo].[@searchQuery]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SearchMeMo].[@SearchField]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SearchMeMo].[@searchQuery]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="347" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.SearchMeMo&#xD;&#xA;(&#xD;&#xA;&#x9;@SearchField&#x9;nvarchar(10),&#xD;&#xA;&#x9;@searchQuery&#x9;nvarchar(50)&#xD;&#xA;)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[SearchUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	declare @strSql nvarchar(255)
+	set
+		@strSql = 'select UID, UserID, Password from Users
+					where ' + @SearchField + ' likes ''%' + @SearchQuery + '%'''
+	exec(@strSql)]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SearchUsers].[@SearchField]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SearchUsers].[@SearchQuery]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SearchUsers].[@SearchField]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SearchUsers].[@SearchQuery]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Offset" Value="499" />
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="265" />
+				<Property Name="StartLine" Value="31" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;create proc dbo.SearchUsers&#xD;&#xA;&#x9;@SearchField nvarchar(25),&#xD;&#xA;&#x9;@SearchQuery nvarchar(25)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Users]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[UID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[UserID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[Password]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ViewMemo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	select Num, Name, Email, Title, PostDate, PostIP
+	from Memos
+	where Num=@Num]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Num]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[PostDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[PostIP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ViewMemo].[@Num]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ViewMemo].[@Num]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="126" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.ViewMemo&#xD;&#xA;(&#xD;&#xA;&#x9;@Num int&#xD;&#xA;)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[WriteMemo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert Memos(Name, Email, Title, PostIP)
+	values (@Name, @Email, @Title, @PostIP)]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Memos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Memos].[PostIP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteMemo].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteMemo].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteMemo].[@Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteMemo].[@PostIP]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteMemo].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteMemo].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteMemo].[@Title]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteMemo].[@PostIP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="216" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create procedure dbo.WriteMemo(&#xD;&#xA;&#x9;@Name NVarChar(25),&#xD;&#xA;&#x9;@Email NVarChar(100),&#xD;&#xA;&#x9;@Title NVarChar(150),&#xD;&#xA;&#x9;@PostIP NVarChar(15)&#xD;&#xA;)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[WriteUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert into Users values(@UserID, @Password)]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteUsers].[@UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WriteUsers].[@Password]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteUsers].[@UserID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[WriteUsers].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="126" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create proc dbo.WriteUsers&#xD;&#xA;&#x9;@UserID nvarchar(25),&#xD;&#xA;&#x9;@Password nvarchar(20)&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>
