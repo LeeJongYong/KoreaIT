@@ -15,7 +15,7 @@
 
             아이디 : <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox><br />
             비밀번호 : <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox><br />
-            <asp:Button ID="btnLogin" runat="server" Text="로그인" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnLogin" runat="server" Text="로그인" OnClick="btnLogin_Click" />  
         </div>
     </form>
 </body>

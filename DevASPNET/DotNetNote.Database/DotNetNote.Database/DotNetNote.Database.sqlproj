@@ -72,6 +72,7 @@
     <Build Include="dbo\Stored Procedures\SearchMeMo.sql" />
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Stored Procedures\Users_Procedures.sql" />
+    <Build Include="dbo\Tables\Tasks.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DotNetNote.Database.publish.xml" />

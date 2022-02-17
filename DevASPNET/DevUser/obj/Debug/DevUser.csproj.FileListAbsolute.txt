@@ -1,4 +1,3 @@
-C:\JYStudy\DevASPNET\DevUser\obj\Debug\DevUser.csproj.AssemblyReference.cache
 C:\JYStudy\DevASPNET\DevUser\obj\Debug\DevUser.csproj.CoreCompileInputs.cache
 C:\JYStudy\DevASPNET\DevUser\bin\DevUser.dll.config
 C:\JYStudy\DevASPNET\DevUser\bin\DevUser.dll

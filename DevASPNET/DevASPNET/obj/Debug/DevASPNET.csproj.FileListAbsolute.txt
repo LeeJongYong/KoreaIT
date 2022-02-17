@@ -151,7 +151,6 @@ C:\JYStudy\DevASPNET\DevASPNET\bin\ko\System.Web.Webpages.Deployment.resources.d
 C:\JYStudy\DevASPNET\DevASPNET\bin\ko\System.Web.Webpages.Razor.resources.dll
 C:\JYStudy\DevASPNET\DevASPNET\bin\ko\System.Web.Helpers.resources.dll
 C:\JYStudy\DevASPNET\DevASPNET\bin\ko\System.Web.Mvc.resources.dll
-C:\JYStudy\DevASPNET\DevASPNET\obj\Debug\DevASPNET.csproj.AssemblyReference.cache
 C:\JYStudy\DevASPNET\DevASPNET\obj\Debug\DevASPNET.csproj.CoreCompileInputs.cache
 C:\JYStudy\DevASPNET\DevASPNET\obj\Debug\DevASPNET.csproj.CopyComplete
 C:\JYStudy\DevASPNET\DevASPNET\obj\Debug\DevASPNET.dll
