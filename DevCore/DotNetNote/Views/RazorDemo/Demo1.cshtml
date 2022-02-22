@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<h1>레이저 표현식 학습</h1>
+
+<h2>변수 선언 및 주석</h2>
+@{
+    var sum = 1234;
+}
+@{
+    var msg = "안녕";
+    // @" " -- 특수 문자 출력할 때 사용
+    var file1 = @"c:\Asp.net\";
+    var file2 = "c:\\Asp.net\\";
+    var quote1 = @"안녕. ""Asp.net core"" ";
+    var quote2 = "안녕. \"Asp.net core\" ";
+}
+
+<h2>인라인 표현식</h2>
+<p>합계 : @sum 메시지 : @msg</p>
+<p>경로 : @file1 @quote1</p>
+<p>경로 : @file2 @quote2</p>
+
+<div>
+    이메일 : aspnet@dotnetkorea.com, a@("@")a.com
+</div>
+<div>
+    트위터 : @@aspnet
+</div>
+
+<h2>API 출력</h2>
+<div>
+    @DateTime.Now.ToString()
+</div>
