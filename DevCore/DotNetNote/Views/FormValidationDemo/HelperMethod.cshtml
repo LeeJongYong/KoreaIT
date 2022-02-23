@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>헬퍼 메소드</title>
+    <script>
+        function checkForm(){
+            var name = document.getElementById("txtName");
+            var content = document.getElementById("txtContent");
+
+            if(name.value.length < 1 || content.value.length < 1){
+                window.alert("이름과 내용을 입력해주세요.");
+                name.focus();
+                name.select();
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>헬퍼 메소드로 폼 구성</h2>
+    @using (Html.BeginForm("HelperMethod", "FormValidationDemo", new{}, FormMethod.Post, false, new{@class = "FromStyle", data_ng_test="test", onsubmit = "checkFrom()"}))
+    {
+        <text>이름 : </text> @Html.TextBox("txtName")<br />
+        <text>내용 : </text> @Html.TextBox("txtContent")<br />
+        <input type="submit" value="입력">
+    }
+    @if(ViewBag.resultString != null)
+    {
+        @ViewBag.resultString
+    }
+</body>
+</html>
+

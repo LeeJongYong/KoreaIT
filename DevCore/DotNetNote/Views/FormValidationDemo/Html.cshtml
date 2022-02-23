@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>순수 html</title>
+    <script>
+        function checkForm(){
+            var name = document.getElementById("txtName");
+            var content = document.getElementById("txtContent");
+
+            if(name.value.length < 1 || content.value.length < 1){
+                window.alert("이름과 내용을 입력해주세요.");
+                name.focus();
+                name.select();
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>html 태그로 폼 구성</h2>
+    <form action="/formValidationDemo/HtmlProcess" method="post" onsubmit="return checkForm()">
+        이름 : <input type="text" id="txtName" name="txtName" value="" />
+        내용 : <input type="text" id="txtContent" name="txtContent" value="" />
+        <input type="submit" value="입력" />
+    </form>
+</body>
+</html>

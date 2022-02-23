@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@using DotNetNote.Services
+@inject CopyrightService copyService
+
+<p>
+    &copy; @copyService.CopyrightString
+</p>
+<p>
+    &copy; @copyService.GetCopyrightString()
+</p>

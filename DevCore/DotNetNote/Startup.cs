@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DotNetNote.Data;
+using DotNetNote.Services;
 
 namespace DotNetNote
 {
@@ -31,6 +32,10 @@ namespace DotNetNote
                     options.UseSqlServer(Configuration.GetConnectionString("DotNetNoteContext")));
 
             services.AddTransient<DotNetNote.Models.DataFinder>();
+
+            services.AddSingleton<InfoService>();
+            services.AddSingleton<IInfoService, InfoService>();
+            services.AddTransient<CopyrightService>();
             
         }
 

@@ -323,3 +323,14 @@ C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\RazorDemo\Demo
 C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\ViewBagDemo\Index.cshtml.g.cs
 C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\ViewWithModelDemo\Index.cshtml.g.cs
 C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormPostDemo\Index.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\Index.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\Html.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\HtmlProcess.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\HelperMethod.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\StronglyTypeView.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\Completed.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\ModelValidation.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FormValidationDemo\ClientValidation.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\SingletonDemo\Index.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\DependencyInjectionDemo\Index.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\DependencyInjectionDemo\AtInjectionDemo.cshtml.g.cs
