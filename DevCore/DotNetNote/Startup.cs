@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DotNetNote.Data;
 using DotNetNote.Services;
+using DotNetNote.Settings;
 
 namespace DotNetNote
 {
