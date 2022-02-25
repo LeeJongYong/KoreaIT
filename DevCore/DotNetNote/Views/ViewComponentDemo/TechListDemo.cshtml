@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<h3>현재 페이지에 사용된 기술 리스트</h3>
+
+@await Component.InvokeAsync("Tech")
+
+@await Component.InvokeAsync("Copyright")

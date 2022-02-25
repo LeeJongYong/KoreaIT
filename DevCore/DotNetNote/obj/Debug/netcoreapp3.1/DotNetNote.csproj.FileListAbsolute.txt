@@ -337,3 +337,7 @@ C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\DependencyInje
 C:\JYStudy\DevCore\DotNetNote\bin\Debug\netcoreapp3.1\Settings\DotNetNoteSettings.json
 C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\StronglyTypedConfiguration\Index.cshtml.g.cs
 C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\FileDemo\FileUploadDemo.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Copyright\Default.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\ViewComponentDemo\CopyrightDemo.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\ViewComponentDemo\TechListDemo.cshtml.g.cs
+C:\JYStudy\DevCore\DotNetNote\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Tech\Default.cshtml.g.cs
